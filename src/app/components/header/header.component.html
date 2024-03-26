@@ -1,0 +1,125 @@
+<header>
+  <div class="header navbar">
+    <div class="container-logo">
+      <div class="area-logo">
+        <img src="../../../assets/logo.png" alt="">
+      </div>
+      <div class="box-logo">
+        <h1>Library Booktopia</h1>
+      </div>
+    </div>
+
+    <div [ngClass]="{'menu-open': isMenuOpen}" class="box-navbar">
+      <div class="container-features">
+        <div class="books-features">
+          <div mdbDropdown class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              aria-expanded="false"
+              mdbDropdownToggle
+            >
+              <i class="fa-solid fa-book"></i>
+              Select a theme
+            </button>
+            <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="books-features">
+          <div mdbDropdown class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              aria-expanded="false"
+              mdbDropdownToggle
+            >
+              <i class="fa-solid fa-info"></i>
+              Info
+            </button>
+            <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">FAQ</a></li>
+              <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+              <li><a class="dropdown-item" href="#">Terms and conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="books-features">
+          <button type="button" class="btn btn-primary" mdbRipple>
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Login in
+          </button>
+          <button type="button" class="btn btn-primary" mdbRipple>
+            <i class="fa-solid fa-user"></i>
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-icons-box" (click)="toggleMenuIcon()">
+      <i *ngIf="!isMenuOpen" class="fa-solid fa-bars"></i>
+      <i *ngIf="isMenuOpen" class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+</header>
+
+<div class="container-ms">
+  <div [ngClass]="{'menu-open': isMenuOpen}" class="navbar-ms">
+    <div class="container-features">
+      <div class="books-features">
+        <div mdbDropdown class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            aria-expanded="false"
+            mdbDropdownToggle
+          >
+            <i class="fa-solid fa-book"></i>
+            Select a theme
+          </button>
+          <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="books-features">
+        <div mdbDropdown class="dropdown">
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            aria-expanded="false"
+            mdbDropdownToggle
+          >
+            <i class="fa-solid fa-info"></i>
+            Info
+          </button>
+          <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">FAQ</a></li>
+            <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+            <li><a class="dropdown-item" href="#">Terms and conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="books-features box-user">
+        <button type="button" class="btn btn-primary" mdbRipple>
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Login in
+        </button>
+        <button type="button" class="btn btn-primary" mdbRipple>
+          <i class="fa-solid fa-user"></i>
+          Sign Up
+        </button>
+      </div>
+    </div>
+</div>
+</div>
