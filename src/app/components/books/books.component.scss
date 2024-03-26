@@ -1,10 +1,55 @@
 .container-books{
+  width: 100vw;
+    h2{
+      margin-left: 90px;
+      text-align: left;
+      font-family: Tenor sans;
+      font-weight: bolder;
+      font-size: 27px;
+      margin-bottom: 50px;
+      overflow-y: hidden;
+    }
+}
+
+.box-books{
 
   width: 80%;
   margin: auto;
   display: flex;
-  background-color: aqua;
+
   justify-content: left;
 
- 
+
+}
+
+swiper-slide{
+  .star-rating{
+    i{
+      color: rgba(214, 214, 8, 0.822);
+    }
+  }
+
+  img{
+    width: 200px;
+    height: 240px;
+    display: flex;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  img:hover{
+    transform: scale(1.1);
+  }
+
+  .span-author{
+    h3{
+      display: inline;
+      font-weight: bold;
+    }
+          font-size: 16px;
+          line-height: 60px;
+          width: 50px;
+          font-family: Tenor sans;
+  }
+
 }
