@@ -1,29 +1,19 @@
 <div class="container-books">
-  <h2>New Releases</h2>
-  <div  class="box-books">
-
-    <swiper-container
-       loop="true"
-       navigation="true"
-       slides-per-view="3"
-       speed="500"
-       pagination="true"
-       >
-
-          <ng-container *ngFor="let data of data">
-            <swiper-slide>
-              <div class="star-rating">
-                <ng-container *ngFor="let star of getStarsArray(data.review)">
-                  <i class="fa-solid fa-star"></i>
-                </ng-container>
-              </div>
-              <img src={{data.img}} alt="">
-              <span class="span-author"><h3>Author:</h3> {{ data.author }}</span>
-            </swiper-slide>
-          </ng-container>
-
-
-    </swiper-container>
+  <h2>Our Books</h2>
+  <div class="area-books">
+    <div  class="box-books" *ngFor="let data of data">
+      <img src={{data.img}} alt="">
+      <div class="star-rating" >
+        <ng-container *ngFor="let star of getStarsArray(data.review)">
+          <i class="fa-solid fa-star"></i>
+        </ng-container>
+      </div>
+      <span class="span-publisher"><h3>Publisher:</h3> {{ data.publisher }}</span>
+      <span class="span-genre"> {{data.genre}}</span>
+      <div class="area-freebooks">
+        Free Digital Book
+      </div>
+    </div>
   </div>
 </div>
- 
+
