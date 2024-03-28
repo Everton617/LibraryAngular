@@ -1,0 +1,54 @@
+.title{
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 80%;
+  text-align: left;
+  padding-left: 10%;
+
+  h2{
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: Tenor sans;
+  }
+}
+
+swiper-container{
+  display: flex;
+  gap: 20px;
+}
+
+
+swiper-slide{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background-color: rgba(233, 241, 241, 0.493);
+  width: 230px;
+  height: 270px;
+  border-radius: 10px;
+    img{
+      margin-top: 30px;
+      width: 200px;
+      height: 230px;
+      margin-bottom: 20px;
+      object-fit: contain;
+    }
+
+    .footer-card{
+      background-color: rgb(127, 255, 212);
+      display: flex;
+      overflow-y: hidden;
+      span{
+        height: 37px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Tenor sans;
+        font-weight: bolder;
+        color: rgba(104, 104, 104, 0.514);
+      }
+    }
+}
