@@ -1,20 +1,24 @@
 .container-books{
-  width: 100vw;
+  width: 100%;
   display: flex;
-  text-align: left;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    h2{
+  padding-top: 200px;
+}
 
+.title{
+      display: grid;
 
+      margin-bottom: 50px;
+      overflow-y: hidden;
+      width: 80%;
+      h2{
       text-align: left;
       font-family: Tenor sans;
       font-weight: bolder;
       font-size: 27px;
-      margin-bottom: 50px;
-      overflow-y: hidden;
-    }
+      }
 }
 
 .area-books{
@@ -92,15 +96,112 @@
 
 }
 
+@media(max-width:1200px){
 
-
-@media(max-width:700px){
-  .box-books{
-    img{
-      width: 150px;
-      height: 200px;
+  .title{
+    h2{
+      font-size:24px;
     }
   }
+
+  .area-books{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box-books{
+    width:250px;
+    height: 350px;
+
+
+    .star-rating{
+      overflow-y: hidden;
+      i{
+        padding-top: 5px;
+        font-size: 12px;
+        color: rgba(214, 214, 8, 0.822);
+      }
+    }
+
+    img{
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+
+    .span-publisher{
+
+      h3{
+        font-size: 13px;
+      }
+            font-size: 13px;
+            font-family: Tenor sans;
+    }
+
+    .span-genre{
+      font-size: 12px;
+    }
+
+    .area-freebooks{
+      font-size: 11px;
+    }
+
+  }
+}
+
+@media(max-width:900px){
+
+  .title{
+    h2{
+      font-size:23px;
+    }
+  }
+
+  .area-books{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box-books{
+    width:200px;
+    height: 320px;
+
+
+    .star-rating{
+      overflow-y: hidden;
+      i{
+        padding-top: 5px;
+        font-size: 12px;
+        color: rgba(214, 214, 8, 0.822);
+      }
+    }
+
+    img{
+      width: 150px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+
+    .span-publisher{
+
+      h3{
+        font-size: 13px;
+      }
+            font-size: 13px;
+            font-family: Tenor sans;
+    }
+
+    .span-genre{
+      font-size: 12px;
+    }
+
+    .area-freebooks{
+      font-size: 11px;
+    }
+
+  }
+
+
 }
 
 
