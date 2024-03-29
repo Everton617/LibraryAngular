@@ -13,3 +13,16 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+
+:root {
+  --swiper-theme-color: #fff !important;
+  --swiper-navigation-size: 44px !important;
+}
+
+
+@media (max-width: 480px){
+  :root{
+    --swiper-navigation-size: 24px !important;
+  }
+}
