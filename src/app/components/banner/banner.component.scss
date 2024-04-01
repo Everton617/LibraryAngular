@@ -1,0 +1,102 @@
+.container-banner
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  width: 45%;
+
+    h1{
+      overflow-y: hidden;
+      text-align: left;
+      font-weight: bold;
+      font-family: "Tenor Sans";
+      font-size: 60px;
+      line-height: 60px;
+      overflow-y: hidden;
+    }
+
+  .area-span{
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    .span-l{
+      font-size: 40px;
+      font-weight: 400;
+      color: rgb(168, 168, 168);
+      font-family: "Tenor Sans";
+      line-height: 30px;
+      padding-right: 20px;
+
+    }
+
+    .span-r{
+      font-size: 30px;
+      line-height: 30px;
+      font-size: 40px;
+      font-weight: 600;
+      color: #3b2697e8;
+      font-family: "Tenor Sans";
+
+    }
+
+  }
+
+  input{
+    width: 80%;
+    max-width: 90%;
+    height: 80px;
+    border-radius: 40px;
+    border-color: rgba(231, 236, 232, 0.74);
+    border-width: 1px;
+    font-size: 25px;
+    padding-left: 70px;
+  }
+
+  input::placeholder{
+    font-size: 26px;
+    padding-left: 10px;
+  }
+
+
+  .search-area{
+    position: relative;
+
+    .icon-search{
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      i{
+        font-size: 40px;
+        overflow-y: hidden;
+        color: #3B2697;
+        cursor: pointer;
+      }
+    }
+
+    .icon-x{
+      position: absolute;
+      left: 500px;
+      bottom: 18px;
+      i{
+        font-size: 25px;
+        overflow-y: hidden;
+        color: rgba(0, 0, 0, 0.205);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.banner-logo{
+  img{
+    width: 1000px;
+    height: 830px;
+  }
+}
+
+
