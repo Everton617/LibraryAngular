@@ -1,4 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener, OnInit, ViewChild, signal } from '@angular/core';
+import { SwiperContainer } from 'swiper/element';
+import { SwiperOptions } from 'swiper/types';
+
+
 
 @Component({
   selector: 'app-swiper',
@@ -8,27 +12,32 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component, HostListener } from '@angular/core';
   styleUrl: './swiper.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class SwiperComponent {
-  slidesPerView:number = 5;
-  screenWidth!: number;
+export class SwiperComponent implements OnInit{
 
-  @HostListener('window:resize')
-  getScreenWidth(){
-    this.screenWidth = window.innerWidth;
-    if(this.screenWidth >= 320 && this.screenWidth <= 500){
-      this.slidesPerView = 1;
-    }
-    else if(this.screenWidth >= 500 && this.screenWidth <= 740){
-      this.slidesPerView = 2;
-    }
-   else if(this.screenWidth >= 740 && this.screenWidth <= 970){
-      this.slidesPerView = 3;
-    }
-    else if(this.screenWidth >= 970 && this.screenWidth <= 1450){
-      this.slidesPerView = 4;
-    }
-    else if(this.screenWidth >= 1450){
-      this.slidesPerView = 6;
-    }
+  swiperElement = signal<SwiperContainer | null>(null);
+
+  ngOnInit(): void {
+    const swiperElemConstrutor = document.querySelector('swiper-container');
+    const swiperOptions: SwiperOptions ={
+      slidesPerView: 1,
+      spaceBetween: 50,
+
+      navigation: {
+        enabled: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    };
+    Object.assign(swiperElemConstrutor!, swiperOptions);
+    this.swiperElement.set(swiperElemConstrutor as SwiperContainer);
+    this.swiperElement()?.initialize();
   }
 }

@@ -1,20 +1,76 @@
-.title{
-  padding-top: 100px;
-  padding-bottom: 50px;
-  width: 80%;
-  text-align: left;
-  padding-left: 10%;
+.area-swiper{
+  background: #F5F6F9;
+  display: flex;
+  height: 655px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
+.title{
+  position: relative;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 190px;
   h2{
-    font-size: 27px;
+    font-size: 60px;
+    overflow-y: hidden;
     font-weight: bolder;
+    line-height: 50px;
     font-family: Tenor sans;
   }
+  span{
+    font-family: Tenor sans;
+  }
+
+  .img-bell{
+    position: absolute;
+    right: 30px;
+    top: 90px;
+    img{
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+}
+
+.box-buttons{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 200px;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F6F9;
+  width: 120px;
+  height: 80px;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.219);
+  border: 2px solid white;
+  transition: transform 0.5s ease;
+  margin-top: 10px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  transform: scale(1.1);
+}
+
+.swiper-button-prev i,
+.swiper-button-next i{
+  font-size: 40px;
+  overflow-y: hidden;
 }
 
 swiper-container{
-width: 100%;
-
+width: 100% !important;
+height: 100;
+display: flex;
+align-items: center;
 }
 
 
@@ -24,15 +80,42 @@ swiper-slide{
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  background-color: rgba(233, 241, 241, 0.493);
-  margin-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  width: 266px !important;
+  height: 330px;
+  margin-bottom: 20px;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.123);
 
+  .custom-swiper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      height: 100%;
+      width: 100%;
+      overflow-y: hidden;
+
+    .description{
+      margin-right: 40px;
+      width: 150px;
+      height: 30px;
+      margin-top: 4px;
+      overflow-y: hidden;
+      span{
+        font-family: "Tenor sans";
+        color: rgba(0, 0, 0, 0.555);
+        font-weight: bold;
+        font-size: 17px;
+
+      }
+    }
+
+  }
 
     img{
-      margin-top: 30px;
-      width: 200px;
+      width: 190px;
       height: 230px;
-      margin-bottom: 20px;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
@@ -41,20 +124,25 @@ swiper-slide{
     }
 
     .footer-card{
+      top: 295px;
+      position: absolute;
       background-color: rgb(127, 255, 212);
       display: flex;
+      width: 100%;
       overflow-y: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       span{
+        padding-top: 7px;
         height: 37px;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-family: Tenor sans;
         font-weight: bolder;
         color: rgba(104, 104, 104, 0.514);
       }
     }
+
+
 }
 
 

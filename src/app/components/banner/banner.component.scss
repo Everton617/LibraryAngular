@@ -27,7 +27,7 @@
     .span-l{
       font-size: 40px;
       font-weight: 500;
-      color: rgb(168, 168, 168);
+      color: rgb(214, 199, 199);
       font-family: "Tenor Sans";
       line-height: 30px;
       padding-right: 20px;
@@ -122,9 +122,12 @@
     }
   }
 
+}
 
-
-
+@media(max-width: 380px){
+  .area-span{
+    width: 245px;
+  }
 }
 
 
