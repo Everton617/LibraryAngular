@@ -1,7 +1,10 @@
 .container-banner
 {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
+
 }
 
 .title-banner{
@@ -98,7 +101,90 @@
   cursor: pointer;
 }
 
+.container-google{
+  position: absolute;
+  top: 750px;
+  display: flex;
+  width: 230px;
+  height: 100px;
+
+  img{
+    object-fit: cover;
+  }
+}
+
+.container-updates{
+  background-color: #3b2697e8;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title{
+    padding-bottom: 20px;
+    h3{
+      color: white;
+      font-size: 30px;
+      overflow-y: hidden;
+      font-weight: bold;
+      font-family: Tenor sans;
+      line-height: 40px;
+    }
+  }
+
+
+    .email-box{
+      display: flex;
+      overflow-y: hidden;
+      align-items: center;
+
+      .input-email{
+        input{
+          padding-left: 20px;
+          width: 300px;
+          height: 40px;
+          border-radius: 10px;
+          outline: 0;
+          border: none;
+        }
+        input::placeholder{
+          font-size: 16px;
+        }
+      }
+
+      .btn-email{
+      padding-left: 20px;
+
+        button{
+          width: 150px;
+          height: 45px;
+          border-radius: 5px;
+          border: none;
+          background-color: rgb(31, 30, 30);
+          font-size: 16px;
+          color: white;
+          font-weight: bold;
+          font-family: Tenor sans;
+          transition: background 0.5s ease;
+          transition: color 0.5s ease;
+        }
+
+        button:hover{
+          background: white;
+          color:  rgb(31, 30, 30);
+        }
+      }
+    }
+
+}
+
 @media(max-width:1135px){
+
+  .container-banner{
+    background: white;
+  }
+
   .banner-logo{
     display: none;
   }
@@ -122,6 +208,42 @@
     }
   }
 
+}
+
+@media(max-width:620px){
+  .container-updates{
+    .title h3{
+      font-size: 25px;
+    }
+
+  .email-box{
+    .input-email{
+      input{
+        padding-left: 20px;
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        outline: 0;
+        border: none;
+      }
+      input::placeholder{
+        font-size: 12px;
+      }
+    }
+
+    .btn-email{
+
+      button{
+        width: 100px;
+        font-size: 12px;
+      }
+    }
+
+
+
+  }
+
+}
 }
 
 @media(max-width: 380px){

@@ -4,7 +4,7 @@
 
 
 .header{
-  background-color: rgb(59, 38, 151);
+  background-color: #4D3AA0;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -27,7 +27,7 @@
 
   h1{
     font-family: "Tenor Sans";
-    color: rgba(255, 255, 255, 0.747);
+    color: rgba(255, 255, 255, 0.945);
     padding-top: 20px;
     font-size: 25px;
   }
@@ -43,14 +43,14 @@
   .books-features{
 
     button{
-      background-color: #3B2697;
+      background-color: #4D3AA0;
     }
 
     .dropdown{
 
 
       button{
-        background-color:#3B2697;
+        background-color:#4D3AA0;
       }
     }
   }
